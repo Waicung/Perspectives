@@ -44,6 +44,7 @@ html,
 
 .gh-page {
     padding: 0 4vmin;
+    background-color: var(--color-bg);
 }
 
 .gh-article {
@@ -97,6 +98,13 @@ html,
     max-height: 700px;
     object-fit: cover;
     margin-bottom: 4vmin;
+    min-height: 55px;
+}
+
+@media (max-width: 740px) {
+    .gh-card-image {
+        max-height: 55px;
+    }
 }
 
 .gh-card-meta {
@@ -110,23 +118,39 @@ html,
 }
 
 .gh-card-content {
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
+    /* max-width: 720px;
+    margin: 0 auto; */
     font-size: 1.6rem;
+    padding: 0 6vmin;
+}
+
+@media (min-width: 740px) {
+    .gh-card-content {
+       padding: 0 2vmin;
+    }
+}
+
+.gh-card-title {
+    overflow-wrap: break-word;
 }
 
 .gh-card-content p {
     margin: 1.2rem 0;
-    padding: 0 6vmin;
+    font-weight: lighter;
+    font-size: 20px;
+    overflow-wrap: break-word;
 }
 
 .gh-card-content > strong {
-    display: inline-block;
-    padding: 1px 0;
-    font-weight: 500;
-    box-shadow: 0 -1px 0 0 inset currentColor;
-    opacity: 0.5;
+    float: right;
+    margin: 3vmin 0;
+    font-size: 20px;
+}
+
+@media (min-width: 740px) {
+    .gh-card-content > strong {
+        margin: 1vmin 0;
+    }
 }
 
 
@@ -234,5 +258,80 @@ html,
 @media (max-width: 700px) {
     .gh-author-meta {
         font-size: 1.6rem;
+    }
+}
+
+.wi-foot-social {
+    display: flex;
+    height: 32px;
+    justify-content: space-around;
+
+}
+
+.wi-social {
+    text-align: center;
+    margin-top: var(--margin);
+}
+
+.gh-card {
+    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #fff;
+    transition: .6s ease;
+}
+
+@media (min-width: 740px) {
+    .gh-postfeed {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .gh-card {
+        width: 32%;
+        margin: 1% 0;
+    }
+
+    .gh-card:not(:first-child) {
+        margin: 1% 0;
+    }
+
+    .gh-card:nth-child(3n-1) {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+}
+
+.gh-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.wi-divider {
+    background-color: var(--color-border);
+    height: 1px;
+    margin: 0 -6vmin;
+}
+
+@media (min-width:740px) {
+    .wi-divider {
+        margin: 0 -2vmin;
+    }
+}
+
+.wi-tag {
+    background-color: var(--color-primary);
+    position: absolute;
+    right: 6vmin;
+    margin-top: 1rem;
+    padding: 7px 14px;
+    font-size: 20px;
+    color: var(--color-tag);
+    border-radius: var(--radius);
+}
+
+@media (min-width: 740px){
+    .wi-tag {
+        right: 2vmin;
     }
 }

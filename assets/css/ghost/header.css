@@ -3,9 +3,10 @@
 
 .gh-head {
     padding: 3vmin 4vmin;
-    font-size: 1.6rem;
+    font-size: 20px;
     line-height: 1.3em;
     background: inherit;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .gh-head a {
