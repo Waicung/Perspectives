@@ -50,10 +50,15 @@
     </nav>
 </header>
 
+{{#is "home"}}
 <section class="wi-tv-container">
-    <span>{{@site.title}}</span>
+    <div class="wi-tv-content">
+        <span>{{@site.description}}</span>
+        <h1>{{@site.title}}</h1>
+    </div>
     <img src="{{@site.cover_image}}" alt="">
 </section>
+{{/is}}
 
 <main class="gh-main">
 

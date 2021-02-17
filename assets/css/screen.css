@@ -337,23 +337,38 @@ html,
 }
 
 .wi-tv-container {
-    position: relative;
-    max-width: 1200px;
-    padding: 0 4vmin;
-    margin: auto;
-    min-height: 300px;
+    display: none;
 }
 
-.wi-tv-container span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    color: #ffffff;
+@media (min-width: 740px) {
+    .wi-tv-container {
+        display: block;
+        position: relative;
+        max-width: 1200px;
+        padding: 0 4vmin;
+        margin: auto;
+        min-height: 100px;
+        max-height: 300px;
+        overflow: hidden;
+        margin-bottom: 6vmin;
 
-}
+    }
 
-.wi-tv-container img {
-    background-color: grey;
+    .wi-tv-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        color: #ffffff;
+
+    }
+
+    .wi-tv-content h1 {
+        text-align: right;
+    }
+
+    .wi-tv-container img {
+        background-color: grey;
+    }
 }
